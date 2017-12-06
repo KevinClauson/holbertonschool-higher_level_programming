@@ -27,7 +27,11 @@ listint_t *insert_node(listint_t **head, int number)
 		current_p = next_p;
 		next_p = next_p->next;
 	}
-	current_p->next = new;
 	new->next = next_p;
+	if (current_p != NULL)
+		current_p->next = new;
+	else
+		*head = new;
+
 	return (new);
 }
