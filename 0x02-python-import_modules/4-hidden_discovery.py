@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import hidden_4
 
+
 def main():
     total = 0
     t = 0
@@ -9,5 +10,6 @@ def main():
             pass
         else:
             print("{:s}".format(i))
+
 if __name__ == "__main__":
     main()
