@@ -3,8 +3,9 @@ from sys import argv
 
 
 def main():
-    n_args = len(argv) - 1
-    print("{:d} arguments{}".format(n_args, '.' if n_args < 1 else ":"))
+    n = len(argv) - 1
+    print("{:d} argument{}{}".format(n, 's' if n == 0 or
+                                     n > 1 else '', '.' if n < 1 else ":"))
     t = 0
     for i in argv:
         if t > 0:
