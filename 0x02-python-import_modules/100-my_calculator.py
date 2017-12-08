@@ -12,8 +12,8 @@ def main():
     try:
         index_op = operators.index(oper)
     except ValueError:
-       print("Unknown operator. Available operators: +, -, * and /")
-       exit(1)
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
     if index_op == 0:
         print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
     elif index_op == 1:
