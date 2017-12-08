@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-from sys import argv
-from calculator_1 import add, sub, mul, div
-
-
 def main():
     leng = len(argv)
 
@@ -28,4 +24,6 @@ def main():
         print("{:d} / {:d} = {}".format(a, b, div(a, b)))
 
 if __name__ == "__main__":
+    from sys import argv
+    from calculator_1 import add, sub, mul, div
     main()
