@@ -2,13 +2,9 @@
 
 
 def print_matrix_integer(matrix=[[]]):
-    i = 0
-    j = 0
-    for r in matrix:
-        j = 0
-        s = ''
-        for c in r:
-            s += "{:d} ".format(c)
-            j += 1
-        print(s)
-        i += 1
+    if matrix:
+        for r in matrix:
+            s = ''
+            for c in r:
+                s += "{:d} ".format(c)
+            print(s)
