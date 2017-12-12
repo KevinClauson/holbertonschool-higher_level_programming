@@ -6,8 +6,9 @@ def print_matrix_integer(matrix=[[]]):
     j = 0
     for r in matrix:
         j = 0
+        s = ''
         for c in r:
-            print("{:d} ".format(matrix[i][j]), end='')
+            s += "{:d} ".format(matrix[i][j])
             j += 1
-        print()
+        print(s)
         i += 1
