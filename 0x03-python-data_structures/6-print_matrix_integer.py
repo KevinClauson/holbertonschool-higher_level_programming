@@ -8,7 +8,7 @@ def print_matrix_integer(matrix=[[]]):
         j = 0
         s = ''
         for c in r:
-            s += "{:d} ".format(matrix[i][j])
+            s += "{:d} ".format(c)
             j += 1
         print(s)
         i += 1
