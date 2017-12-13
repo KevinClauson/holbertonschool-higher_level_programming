@@ -25,14 +25,15 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *start;
 	int i, j, len;
-	int *arr;
+	int arr[2000];
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
 		return (1);
 	start = *head;
 	len = length(*head);
-	arr = malloc(sizeof(int) * len);
+	/*arr = malloc(sizeof(int) * len);
 	if (arr == NULL)
 		return (1);
+	*/
 	i = 0;
 	while (start)
 	{
@@ -44,10 +45,8 @@ int is_palindrome(listint_t **head)
 	{
 		if (arr[i] != arr[j])
 		{
-		    free(arr);
 		    return (0);
 		}
 	}
-	free(arr);
 	return (1);
 }
