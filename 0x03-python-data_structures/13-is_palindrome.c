@@ -27,7 +27,7 @@ int is_palindrome(listint_t **head)
 	int i, j, len, half;
 
 	if (head == NULL)
-		return (0);
+		return (1);
 	if (*head == NULL)
 		return (1);
 	start = check = *head;
