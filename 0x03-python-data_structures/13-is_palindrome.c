@@ -1,0 +1,42 @@
+#include "lists.h"
+
+int length(listint_t *head)
+{
+	int i;
+
+	i = 0;
+	while (head)
+	{
+		head = head->next;
+		++i;
+	}
+	return (i);
+}
+
+int is_palindrome(listint_t **head)
+{
+	listint_t *start, *check;
+	int i, j, len, half;
+
+	if (head == NULL)
+		return (0);
+	start = check = *head;
+	len = length(*head);
+	if (len == 1)
+		return (1);
+	half = len / 2;
+
+	for(i = 0; i < half; ++i)
+	{
+		check = *head;
+		for (j = 0; j < len - 1; ++j)
+		{
+			check = check->next;
+		}
+		if (check->n != start->n)
+			return (0);
+		--len;
+		start = start->next;
+	}
+	return (1);
+}
