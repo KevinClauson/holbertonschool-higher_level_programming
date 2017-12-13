@@ -34,14 +34,14 @@ int is_palindrome(listint_t **head)
 
 	for (i = 0; i < half; ++i)
 	{
-		check = *head;
+		check = start;
 		for (j = 0; j < len - 1; ++j)
 		{
 			check = check->next;
 		}
 		if (check->n != start->n)
 			return (0);
-		--len;
+		len -= 2;
 		start = start->next;
 	}
 	return (1);
