@@ -33,7 +33,7 @@ int is_palindrome(listint_t **head)
 	start = check = *head;
 	len = length(*head);
 	if (len == 1)
-		return (1);
+		return (0);
 	half = len / 2;
 
 	for (i = 0; i < half; ++i)
