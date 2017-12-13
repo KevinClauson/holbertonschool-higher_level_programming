@@ -3,7 +3,7 @@
 
 def add_tuple(tuple_a=(), tuple_b=()):
     arr = [0, 0]
-    j = 0;
+    j = 0
     for i in tuple_a:
         if j == 0:
             arr[0] += i
