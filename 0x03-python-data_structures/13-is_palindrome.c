@@ -25,7 +25,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *start;
 	int i, j, len;
-	int arr[2000];
+	int arr[5000];
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
 		return (1);
 	start = *head;
