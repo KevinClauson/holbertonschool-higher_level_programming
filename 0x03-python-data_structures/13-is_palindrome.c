@@ -26,14 +26,10 @@ int is_palindrome(listint_t **head)
 	listint_t *start, *check;
 	int i, j, len, half;
 
-	if (head == NULL)
-		return (1);
-	if (*head == NULL)
+	if (head == NULL || *head == NULL || (*head)->next == NULL)
 		return (1);
 	start = check = *head;
 	len = length(*head);
-	if (len == 1)
-		return (1);
 	half = len / 2;
 
 	for (i = 0; i < half; ++i)
