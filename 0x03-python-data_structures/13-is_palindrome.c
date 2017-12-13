@@ -23,26 +23,29 @@ int length(listint_t *head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *start, *check;
-	int i, j, len, half;
-
+	listint_t *start;
+	int i, j, len;
+	int *arr;
 	if (head == NULL || *head == NULL || (*head)->next == NULL)
 		return (1);
-	start = check = *head;
+	start = *head;
 	len = length(*head);
-	half = len / 2;
-
-	for (i = 0; i < half; ++i)
+	arr = malloc(sizeof(int) * len);
+	i = 0;
+	while (start)
 	{
-		check = start;
-		for (j = 0; j < len - 1; ++j)
-		{
-			check = check->next;
-		}
-		if (check->n != start->n)
-			return (0);
-		len -= 2;
+		arr[i] = start->n;
 		start = start->next;
+		++i;
 	}
+	for (i = 0, j = len - 1; i < j; ++i, --j)
+	{
+		if (arr[i] != arr[j])
+		{
+		    free(arr);
+		    return (0);
+		}
+	}
+	free(arr);
 	return (1);
 }
