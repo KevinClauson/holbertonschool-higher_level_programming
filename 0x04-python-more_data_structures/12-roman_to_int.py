@@ -15,9 +15,10 @@ def roman_to_int(roman_string):
     length = len(num)
     k = length - 1
     result = 0
-    for i in num:
-        if k < 1 and num[k] < num[k-1]:
-            result = result - num[k]
+    while k >= 0:
+        if k > 0 and num[k] > num[k-1]:
+            result = num[k] - num[k-1]
+            k -= 1
         else:
             result = result + num[k]
         k -= 1
