@@ -12,7 +12,10 @@ def roman_to_int(roman_string):
                     num.append(digit[k])
                 k += 1
         length = len(num)
-        if length < 1:
+        test = 0
+        for i in num:
+            test += i
+        if test < 1:
             return 0
         k = length - 1
         result = 0
