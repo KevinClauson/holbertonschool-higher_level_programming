@@ -9,4 +9,3 @@ def safe_function(fct, *args):
     except Exception as inst:
         print("Exception:", inst, file=sys.stderr)
         return None
-    
