@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Square Module """
 
+
 class Square:
     """ Square Class """
     def __init__(self, size=0, position=(0, 0)):
@@ -8,7 +9,7 @@ class Square:
         self.size = size
         self.position = position
 
-    @property    
+    @property
     def size(self):
         """ returns the size var"""
         return self.__size
@@ -31,9 +32,11 @@ class Square:
     @position.setter
     def position(self, value):
         """sets the position, checks if tuple, length of 2 int less than 0"""
-        if type(value) != tuple or len(value) != 2: 
+        if type(value) != tuple or len(value) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
-        elif type(value[0]) != int or value[0] < 0 or type(value[1]) != int or value[1] < 0:
+        elif type(value[0]) != int or value[0] < 0:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        elif type(value[1]) != int or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integers')
         else:
             self.__position = value
@@ -55,4 +58,3 @@ class Square:
                 for j in range(0, self.__size):
                     print("#", end='')
                 print()
-                
