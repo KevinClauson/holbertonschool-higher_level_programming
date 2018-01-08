@@ -1,0 +1,20 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# long string
+>>> text_indentation('Lorem ipsum dolor sit amet? Hello.')
+Lorem ipsum dolor sit amet?
+<BLANKLINE>
+Hello.
+<BLANKLINE>
+
+# spaces at start, end and before and after delimtiters
+>>> text_indentation('   TEST.   fuba :  css     ?    Gold     ?   check  t  ')
+TEST.
+<BLANKLINE>
+fuba :
+<BLANKLINE>
+css     ?
+<BLANKLINE>
+Gold     ?
+<BLANKLINE>
+check  t

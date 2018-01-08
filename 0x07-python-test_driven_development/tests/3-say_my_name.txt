@@ -1,0 +1,5 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# test regular name
+>>> say_my_name("Kevin", "Clauson")
+My name is Kevin Clauson

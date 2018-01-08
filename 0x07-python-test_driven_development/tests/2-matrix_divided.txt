@@ -1,0 +1,8 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# define matrix
+>>> matrix = [[2, 2, 2], [2, 2, 2]]
+
+# divide by 2
+>>> print(matrix_divided(matrix, 2))
+[[1.0, 1.0, 1.0], [1.0, 1.0, 1.0]]

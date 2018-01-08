@@ -1,0 +1,25 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# 2 ints
+>>> add_integer(3, 5)
+8
+
+# 1 int and 1 float
+>>> add_integer(3, 2.5)
+5
+
+# 2 floats
+>>> add_integer(3.5, 2.5)
+5
+
+# checking with wrong values
+>>> add_integer("s", 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer 
+
+# check wrong value for b 
+>>> add_integer(5, "g")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer 
