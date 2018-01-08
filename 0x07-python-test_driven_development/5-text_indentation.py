@@ -9,18 +9,20 @@ def text_indentation(text):
     """ function tht prints two lines after certain chars """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    flag = 0
-    for i in text:
-        if i == '?' or i == '.' or i == ':':
-            print(i)
+    flag = 1
+    i = 0
+    while i < len(text):
+        if text[i] == '?' or text[i] == '.' or text[i] == ':':
+            print(text[i])
             print()
             flag = 1
         else:
             if flag == 1:
-                if i == ' ':
-                    pass
-                else:
-                    print(i, end='')
+                if text[i] == ' ':
+                    while(text[i] == ' '):
+                        i += 1
+                print(text[i], end='')
                 flag = 0
             else:
-                print(i, end='')
+                print(text[i], end='')
+        i += 1
