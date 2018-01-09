@@ -18,7 +18,7 @@ class Rectangle:
     @property
     def height(self):
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -60,6 +60,7 @@ class Rectangle:
         return s
 
     def __repr__(self):
+        """ prints out string version of rectangle """
         s = "Rectangle("
         s += str(self.__width)
         s += ", "
@@ -68,5 +69,6 @@ class Rectangle:
         return s
 
     def __del__(self):
+        """ detects deletion of REctangle """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle…")

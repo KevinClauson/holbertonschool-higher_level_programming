@@ -10,11 +10,11 @@ class Rectangle:
         """ init a rectangle with width and height """
         self.width = width
         self.height = height
-        
+
     @property
     def height(self):
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -62,6 +62,3 @@ class Rectangle:
         s += str(self.__height)
         s += ")"
         return s
-
-    def __del__(self):
-        print("Bye rectangle…")
