@@ -82,3 +82,8 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """ returns a square of size size """
+        return Rectangle(size, size)
