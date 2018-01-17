@@ -1,0 +1,14 @@
+>>> print(__import__('1-my_list').MyList.__doc__)
+subcall of list that adds a method to print 
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> a_list = MyList()
+
+>>> a_list = list(range(10, 0, -1))
+
+>>> print(a_list)
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+>>> MyList.print_sorted(a_list)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
