@@ -19,6 +19,6 @@ def pascal_triangle(n):
                 temp.append(new[t][i] + new[t][i+1])
             if i == (len(new[t]) - 1):
                 temp.append(new[t][i])
-        t+=1
+        t += 1
         new.append(temp)
     return new
