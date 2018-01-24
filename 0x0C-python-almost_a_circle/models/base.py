@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-import json
 """
 module with class Base
 """
+
+
+import json
+
 
 
 class Base:
