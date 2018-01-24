@@ -16,7 +16,7 @@ class Base:
     def __init__(self, id=None):
         """
         instantiate base
-        """    
+        """
         if id:
             self.id = id
         else:
@@ -28,7 +28,7 @@ class Base:
         """
         takes a dict and puts into a json string
         """
-        if list_dictionaries == None or len(list_dictionaries) == 0:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -38,11 +38,10 @@ class Base:
         """
         writes the JSON string representation of list_objs to a file
         """
-        if list_objs == None:
+        if list_objs is None:
             new_list = []
         else:
             new_list = list(item.to_dictionary() for item in list_objs)
-        
         file_name = cls.__name__ + ".json"
 
         with open("{}".format(file_name), "w") as new_file:
@@ -53,7 +52,7 @@ class Base:
         """
         returns the list of the JSON string representation json_string
         """
-        if json_string == None or len(json_string) == 0:
+        if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 

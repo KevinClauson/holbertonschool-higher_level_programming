@@ -62,7 +62,7 @@ class Rectangle(Base):
         """
         Getter for x
         """
-        return self.__x 
+        return self.__x
 
     @x.setter
     def x(self, value):
@@ -91,7 +91,7 @@ class Rectangle(Base):
         """
         return area of rect
         """
-        return self.__width *self.__height
+        return self.__width * self.__height
 
     def display(self):
         for j in range(self.__y):
@@ -104,7 +104,8 @@ class Rectangle(Base):
         """
         pretty print of rectangle
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height) 
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
+                                                    self.width, self.height)
 
     def update(self, *args, **kwargs):
         """
@@ -132,9 +133,10 @@ class Rectangle(Base):
                 self.x = kwargs.get("x")
             if "y" in kwargs:
                 self.y = kwargs.get("y")
-    
+
     def to_dictionary(self):
         """
         returns the dictionary representation of a Rectangle
         """
-        return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}
+        return {"id": self.id, "width": self.width, "height": self.height,
+                "x": self.x, "y": self.y}
