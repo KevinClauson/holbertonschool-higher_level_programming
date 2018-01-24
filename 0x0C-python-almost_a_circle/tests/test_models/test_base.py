@@ -52,6 +52,7 @@ class TestBase(unittest.TestCase):
         """Presence of load from file docstring"""
         lff_doc = Base.load_from_file.__doc__
         self.assertTrue(len(lff_doc) > 1)
+
     def test_ids(self):
         """Testing correct ids"""
         Base._Base__nb_objects = 0
