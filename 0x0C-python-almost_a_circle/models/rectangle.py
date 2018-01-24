@@ -120,7 +120,7 @@ class Rectangle(Base):
             if numargs > 3:
                 self.x = args[3]
             if numargs > 4:
-                self.x = args[4]
+                self.y = args[4]
         else:
             if "id" in kwargs:
                 self.id = kwargs.get("id")
