@@ -7,7 +7,6 @@ module with class Base
 import json
 
 
-
 class Base:
     """
     classf or all objects
