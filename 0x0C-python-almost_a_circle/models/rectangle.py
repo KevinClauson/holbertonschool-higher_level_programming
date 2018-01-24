@@ -23,6 +23,9 @@ class Rectangle(Base):
 
     @staticmethod
     def setter_check(var, value):
+        """
+        set values
+        """
         if type(value) != int:
             raise TypeError("{} must be an integer".format(var))
         elif (var == "x" or var == "y") and value < 0:
@@ -54,6 +57,9 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """
+        set height
+        """
         self.setter_check("height", value)
         self.__height = value
 
@@ -94,6 +100,9 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """
+        diplay
+        """
         for j in range(self.__y):
             print()
         for i in range(self.__height):
