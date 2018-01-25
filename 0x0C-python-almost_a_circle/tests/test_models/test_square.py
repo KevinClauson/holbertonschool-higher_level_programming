@@ -15,15 +15,6 @@ from models.square import Square
 class TestSquare(unittest.TestCase):
     """Square tests"""
 
-    def test_print(self):
-        """Test print method."""
-        square = Square(5, 3, 5)
-        out = io.StringIO()
-        sys.stdout = out
-        square.display()
-        sys.stdout = sys.__stdout__
-        self.assertEqual(out.getvalue(), '\n\n\n\n\n   #####\n   #####\n   #####\n   #####\n   #####\n')
-
     def test_module_docstr(self):
         """
             is there a module docstring
