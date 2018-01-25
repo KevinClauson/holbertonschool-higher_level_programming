@@ -6,7 +6,7 @@ Tests for Square Class
 
 import unittest
 import sys
-import io 
+import io
 from models.base import Base
 from models import square
 from models.square import Square
@@ -192,6 +192,3 @@ class TestSquare(unittest.TestCase):
         square2.display()
         sys.stdout = sys.__stdout__
         self.assertEqual('##\n##\n', output.getvalue())
-    
-if __name__ == "__main__":
-    unittest.main()

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Unit Test for 'Rectangle' class """
+
+
 import unittest
 import sys
 from io import StringIO
@@ -87,7 +89,7 @@ class test_base(unittest.TestCase):
         self.assertEqual(rectangle9.id, 55)
         self.assertEqual(rectangle9.width, 4)
         self.assertEqual(rectangle9.height, 3)
-        self.assertEqual(rectangle9.x, 1)
+        self.assertEqual(rectangle9.x, 2)
         self.assertEqual(rectangle9.y, 1)
 
         rectangle10 = Rectangle(2, 2, 2, 2)
