@@ -4,6 +4,7 @@
 
 import unittest
 import sys
+import json
 from io import StringIO
 from models.rectangle import Rectangle
 from models.base import Base
@@ -102,4 +103,12 @@ class test_base(unittest.TestCase):
         self.assertEqual(rectangle10.height, 7)
         self.assertEqual(rectangle10.x, 9)
         self.assertEqual(rectangle10.y, 8)
+
+    def test_create_base(self):
+        """Test create rectangle"""
+        s1 = Rectangle(10, 7, 3, 8)
+        s1_dictionary = s1.to_dictionary()
+        s2 = Rectangle.create(**s1_dictionary)
+        self.assertEqual(s1.__str__(), s2.__str__())
+        self.assertNotEqual(s1, s2)
 
