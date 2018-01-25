@@ -67,3 +67,21 @@ class TestBase(unittest.TestCase):
         self.assertEqual(self.b3.id, 3)
         self.assertEqual(self.b4.id, 12)
         self.assertEqual(self.b5.id, 4)
+
+    def test_to_json_string(self):
+        """Test to_json_string"""
+        s = [{'id': 99}, {'height': 66}]
+        t = '[{"id": 99}, {"height": 66}]'
+        self.assertEqual(Base.to_json_string(s), t)
+
+    def test_to_json_string_none(self):
+        """Test to_json_string when parameter is none"""
+        s = None
+        t = '[]'
+        self.assertEqual(Base.to_json_string(s), t)
+    
+    def test_to_json_string_empty(self):
+        """Test to_json_string when parameter is empty"""
+        s = []
+        t = '[]'
+        self.assertEqual(Base.to_json_string(s), t)

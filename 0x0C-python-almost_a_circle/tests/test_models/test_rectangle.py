@@ -74,13 +74,16 @@ class test_base(unittest.TestCase):
                          "[Rectangle] (101) 6/7 - 4/5\n")
         sys.stdout = sys.__stdout__
 
-    def test_display_1(self):
-        """ Test 'Rectangle' class' public 'display' function """
-        rectangle8 = Rectangle(3, 2, 2, 2)
-        sys.stdout = StringIO()
-        rectangle8.display()
-        self.assertEqual(sys.stdout.getvalue(), "\n\n  ###\n  ###\n")
+    def test_display_at_x_y(self):
+        """Test display at x y"""
+        Base._Base__nb_object = 0
+        r1 = Rectangle(3, 4, 2, 2)
+        stdout1 = StringIO()
+        sys.stdout = stdout1
+        r1.display()
         sys.stdout = sys.__stdout__
+        expected = "\n\n  ###\n  ###\n  ###\n  ###\n"
+        self.assertEqual(expected, stdout1.getvalue())
 
     def test_update(self):
         """ Test 'Rectangle' class' public 'update' function """
@@ -99,3 +102,4 @@ class test_base(unittest.TestCase):
         self.assertEqual(rectangle10.height, 7)
         self.assertEqual(rectangle10.x, 9)
         self.assertEqual(rectangle10.y, 8)
+
