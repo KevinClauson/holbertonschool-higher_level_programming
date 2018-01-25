@@ -5,6 +5,7 @@ Unit tests for Base class
 
 
 import unittest
+import json
 from models import base
 from models.base import Base
 
@@ -85,3 +86,24 @@ class TestBase(unittest.TestCase):
         s = []
         t = '[]'
         self.assertEqual(Base.to_json_string(s), t)
+
+    def test_save_to_file_none(self):
+        """Test save_to_file with parameter of none"""
+        Base.save_to_file(None)
+        with open("Base.json", "r") as fd:
+            s = json.load(fd)
+            self.assertEqual(len(s), 0)
+            self.assertEqual(s, [])
+
+    def test_save_to_file_empty(self):
+        """Test save_to_file with parameter empty"""
+        Base.save_to_file([])
+        with open("Base.json", "r") as fd:
+            s = json.load(fd)
+            self.assertEqual(len(s), 0)
+            self.assertEqual(s, [])
+
+    def test_load_from_file(self):
+        """Test load_from_file with no file"""
+        s = Base.load_from_file()
+        self.assertEqual(s, [])
