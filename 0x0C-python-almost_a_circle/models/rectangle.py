@@ -97,17 +97,17 @@ class Rectangle(Base):
         """
         return area of rect
         """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """
         diplay
         """
-        for j in range(self.__y):
+        for j in range(self.y):
             print()
         for i in range(self.__height):
-            print("{}".format(self.__x * " "), end='')
-            print("{}".format(self.__width * '#'))
+            print("{}".format(self.x * " "), end='')
+            print("{}".format(self.width * '#'))
 
     def __str__(self):
         """
