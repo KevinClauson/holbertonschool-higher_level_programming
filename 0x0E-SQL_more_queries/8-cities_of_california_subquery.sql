@@ -1,5 +1,4 @@
--- lists all the cities of California that can be found in the database
-SELECT cities.id, cities.name, states.name
-       FROM cities INNER JOIN states
-       ON states.id = cities.state_id
+-- list all cities of Cali
+SELECT id, name FROM cities
+       WHERE state_id = (SELECT id FROM states WHERE name = 'California')
        ORDER BY cities.id;
