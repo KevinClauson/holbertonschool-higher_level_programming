@@ -2,17 +2,16 @@
 """finds peak"""
 
 
-def find_peak(nums):
+def find_peak(list_of_integers):
     """
     finds peak
     """
+    nums = list_of_integers
     size = len(nums)
     if not nums or size == 0:
         return None
     elif num == 1:
         return nums[0]
-    elif num == 2:
-        return max(nums[0], nums[1])
     peak = None
     for i in range(size):
         if i == 0 and nums[i] >= nums[i+1]:
