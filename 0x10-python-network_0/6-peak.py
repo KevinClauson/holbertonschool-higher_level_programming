@@ -2,7 +2,7 @@
 """finds peak"""
 
 
-ç∂çdef find_peak(nums):
+def find_peak(nums):
     """
     finds peak
     """
