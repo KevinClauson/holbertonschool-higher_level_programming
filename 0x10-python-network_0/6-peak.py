@@ -18,15 +18,15 @@ def find_peak(list_of_integers):
     start = 0
     end = size - 1
     while start < end:
-        if mid == 0 or mid == size - 1:
+        if mid == start or mid ==  end:
             return nums[mid]
         elif nums[mid] > nums[mid-1] and nums[mid] > nums[mid+1]:
             return nums[mid]
         elif nums[mid] < nums[mid+1]:
-            start = mid
+            start = mid + 1
             mid = (start + end) // 2
         elif nums[mid] < nums[mid-1]:
-            end = mid
+            end = mid - 1
             mid = (start + end) // 2
         else:
             return nums[mid]
