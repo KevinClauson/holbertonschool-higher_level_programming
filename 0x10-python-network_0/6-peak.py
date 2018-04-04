@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 """finds peak"""
 
-def find_peak(list_of_integers):
+def find_peak(nums):
     """
     finds peak
     """
-    if not list_of_integers or len(list_of_integers) == 0:
+    size = len(nums)
+    if not nums or size == 0:
         return None
-    elif len(list_of_integers) == 1:
-        return list_of_integers[0]
+    elif num == 1:
+        return nums[0]
+    elif num == 2:
+        return max(nums[0], nums[1])
     for i in range(len(list_of_integers)):
         if i == 0 and list_of_integers[i] >= list_of_integers[i+1]:
             return list_of_integers[i]
