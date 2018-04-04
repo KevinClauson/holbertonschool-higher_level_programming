@@ -12,13 +12,21 @@ def find_peak(list_of_integers):
         return None
     elif size == 1:
         return nums[0]
-    peak = None
-    for i in range(size):
-        if i == 0 and nums[i] >= nums[i+1]:
-            peak = nums[i]
-        elif i == size - 1 and nums[i] > nums[i-1]:
-            return nums[i]
+    elif size == 2:
+        return max(nums[0], nums[1])
+    mid = size // 2
+    start = 0
+    end = size - 1
+    while start < end:
+        if mid != 0 and mid != size - 1 and nums[mid] >= nums[mid-1] and nums[mid] >= nums[mid+1]:
+            return nums[mid]
+        elif nums[mid] < nums[mid+1]:
+            start = mid
+            mid = start + end // 2
         elif i != 0 and i != size - 1:
-            if nums[i] > nums[i-1] and nums[i] > nums[i+1]:
-                return nums[i]
-    return peak
+            end = start
+            mid = start + end // 2
+        else:
+            start = mid
+            mid = start + end // 2
+    return nums[mid]
