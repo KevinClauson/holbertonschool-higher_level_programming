@@ -16,9 +16,9 @@ def get_url():
     with request.urlopen(URL) as response:
         html = response.read()
         print("Body response:")
-        print("\t- {}".format(type(html)))
-        print("\t- {}".format(html))
-        print("\t- {}".format(html.decode('utf8')))
+        print("\t- type: {}".format(type(html)))
+        print("\t- content: {}".format(html))
+        print("\t- utf8 content: {}".format(html.decode('utf8')))
 
 if __name__ == "__main__":
     get_url()
