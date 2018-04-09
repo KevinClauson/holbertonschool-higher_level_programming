@@ -12,7 +12,7 @@ def get_url(URL):
     prints out header value
     """
     r = requests.get(URL)
-    print("{}".format(r.headers['X-Request-Id'])
+    print("{}".format(r.headers['X-Request-Id']))
 
 if __name__ == "__main__":
     get_url(sys.argv[1])
