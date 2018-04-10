@@ -15,9 +15,10 @@ def get_url(url, repo, owner):
         my_json = r.json()
         my_list = []
         cnt = 0
-        for rec in my_json:
-                sha = rec.get('sha')
-                commit_dic = rec.get("commit")
+        length = len(my_json)
+        for i in range(len(my_json) - 1, 0, -1):
+                sha = my_json[i].get('sha')
+                commit_dic = my_json[i].get("commit")
                 author = commit_dic.get("author")
                 name = author.get("name")
                 print("{} {}".format(sha, name))
