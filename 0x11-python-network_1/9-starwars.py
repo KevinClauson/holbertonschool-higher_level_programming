@@ -11,7 +11,7 @@ def get_url(url, name):
         """
         prints out header value
         """
-        payload = { 'search': name}
+        payload = {'search': name}
         r = requests.get(url, params=payload)
         my_json = r.json()
         num_result = my_json.get('count')
