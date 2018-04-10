@@ -13,14 +13,13 @@ def get_url(url, name):
         """
         payload = { 'search': name}
         r = requests.get(url, params=payload)
-        print(r.url)
-        try:
-                my_json = r.json()
-                print("Number of results: {}".format(my_json['count']))
-                for i in my_json['results']:
-                        print(i['name'])
-        except:
-                print("Not a valid JSON")
+        my_json = r.json()
+        num_result = my_json.get('count')
+        print("Number of results: {}".format(num_result))
+        if num_result > 0:
+                names = my_json.get('results')
+                for i in names:
+                        print(i.get('name'))
 
 if __name__ == "__main__":
         url = 'https://swapi.co/api/people/'
