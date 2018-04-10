@@ -30,11 +30,11 @@ def get_url(url, api, secret, search):
         final_json = new_json.get('statuses')
         cnt = 0
         for tweet in final_json:
-                tweet_id = tweet.get("id")
+                tweet_id = tweet.get("id_str")
                 tweet_text = tweet.get("text")
                 user = tweet.get("user")
                 tweet_owner = user.get('name')
-                print("[{}] {} {}".format(tweet_id, tweet_text, tweet_owner))
+                print("[{}] {} by {}".format(tweet_id, tweet_text, tweet_owner))
                 cnt += 1
                 if cnt == 5:
                         break
