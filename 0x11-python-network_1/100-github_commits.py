@@ -13,7 +13,6 @@ def get_url(url, repo, owner):
         url += repo + '/' + owner + "/commits"
         r = requests.get(url)
         my_json = r.json()
-        my_list = []
         cnt = 0
         length = len(my_json)
         for i in range(len(my_json)):
@@ -30,4 +29,4 @@ if __name__ == "__main__":
         url = 'https://api.github.com/repos/'
         repo = sys.argv[1]
         owner = sys.argv[2]
-        get_url(url, repo, owner)
+        get_url(url, owner, repo)
