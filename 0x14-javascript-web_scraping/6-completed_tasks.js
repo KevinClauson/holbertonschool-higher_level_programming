@@ -9,9 +9,12 @@ request.get(url, function getText (error, response, body) {
   else {
     let tasks = JSON.parse(body);
     let myDict = {};
+    let key;
     for (let i in tasks) {
-      let key = (tasks[i].userId);
+      if (tasks[i].completed === true) {
+      key = tasks[i].userId.toString();
       myDict[key] = (myDict[key] || 0) + 1;
+      }
     }
     console.log(myDict);
   }
