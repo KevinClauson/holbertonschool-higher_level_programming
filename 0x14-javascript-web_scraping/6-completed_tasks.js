@@ -11,10 +11,9 @@ request.get(url, function getText (error, response, body) {
     let myDict = {};
     let key;
     for (let i in tasks) {
-      if (tasks[i].completed === true) {
       key = tasks[i].userId.toString();
-      myDict[key] = (myDict[key] || 0) + 1;
-      }
+      if (tasks[i].completed === true) myDict[key] = (myDict[key] || 0) + 1;
+      else myDict[key] = (myDict[key] || 0);
     }
     console.log(myDict);
   }
