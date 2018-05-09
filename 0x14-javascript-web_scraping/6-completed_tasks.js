@@ -8,7 +8,7 @@ request.get(url, function getText (error, response, body) {
   if (error) console.log(error);
   else {
     let tasks = JSON.parse(body);
-    let myDict = {};
+    let myDict = Object();
     let key;
     for (let i in tasks) {
       key = tasks[i].userId.toString();
