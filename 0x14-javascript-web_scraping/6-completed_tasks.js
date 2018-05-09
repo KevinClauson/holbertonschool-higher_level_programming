@@ -15,6 +15,7 @@ request.get(url, function getText (error, response, body) {
       if (tasks[i].completed === true) myDict[key] = (myDict[key] || 0) + 1;
       else myDict[key] = (myDict[key] || 0);
     }
-    console.log(myDict);
+    if (Object.keys(myDict).length === 0) console.log('{}');
+    else console.log(myDict);
   }
 });
