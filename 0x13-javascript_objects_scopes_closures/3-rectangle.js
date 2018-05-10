@@ -9,7 +9,7 @@ class Rectangle {
     }
   }
   print () {
-    let myStr = Array(this.width + 1).join("X");
+    let myStr = Array(this.width + 1).join('X');
     for (let i = 0; i < this.height; i++) {
       console.log(myStr);
     }
